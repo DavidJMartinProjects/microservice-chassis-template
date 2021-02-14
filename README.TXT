@@ -1,15 +1,16 @@
 mvn compile jib:dockerBuild
-
 skaffold init --skip-build --force
-skaffold dev --port-forward
 
-skaffold delete
 
 *** JIB CONFIG ***
-to point skaffold to the docker image build by Jib, add the below to the generated skaffold.yaml
+to point skaffold to the local docker image build by Jib, add the below to the generated skaffold.yaml
 
 build:
   artifacts:
-    - image: sample
+    - image: dave/sample
       context: .
       jib: {}
+******************
+
+skaffold dev --port-forward
+skaffold delete

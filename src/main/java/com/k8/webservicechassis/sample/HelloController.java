@@ -12,7 +12,13 @@ public class HelloController {
     @GetMapping
     @ResponseBody
     public String getGreeting() {
-        return "success: web service online.";
+        return "success! greeting service online.";
+    }
+
+    @GetMapping("/info")
+    @ResponseBody
+    public String getInfo() {
+        return "success! info service online.";
     }
 
 }
