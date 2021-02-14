@@ -8,7 +8,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 @KubernetesApplication(
-		replicas = 2,
 		expose = false,
 		ports = @Port(name = "http", containerPort = 8080),
 		labels = @Label(key = "version", value = "v1")
