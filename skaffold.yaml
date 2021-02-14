@@ -1,0 +1,15 @@
+apiVersion: skaffold/v2beta12
+kind: Config
+metadata:
+  name: sample
+deploy:
+  kubectl:
+    manifests:
+    - target/classes/META-INF/dekorate/kubernetes.json
+    - target/classes/META-INF/dekorate/kubernetes.yml
+
+build:
+  artifacts:
+    - image: sample
+      context: .
+      jib: {}
