@@ -1,3 +1,6 @@
+ToDo: uplift this readme when I get time
+
+
 mvn compile jib:dockerBuild
 skaffold init --skip-build --force
 
