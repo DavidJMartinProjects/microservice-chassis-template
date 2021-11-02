@@ -10,6 +10,6 @@ deploy:
 
 build:
   artifacts:
-    - image: dave/sample
+    - image: davidjmartin/sample-image
       context: .
       jib: {}
